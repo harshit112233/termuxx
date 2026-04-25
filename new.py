@@ -1,4 +1,8 @@
-import os
+import subprocess
 
-number = "8708215199"
-os.system(f'termux-telephony-call {number}')
+phone_number = "+911234567890"
+subprocess.run([
+    "am", "start",
+    "-a", "android.intent.action.DIAL",
+    "-d", f"tel:{phone_number}"
+])
