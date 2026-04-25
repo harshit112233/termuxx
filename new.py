@@ -1,4 +1,6 @@
-import subprocess
+import subprocess, time
+
+time.sleep(5)
 
 phone_number = "+911234567890"
 subprocess.run([
